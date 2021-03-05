@@ -1,4 +1,5 @@
 import discord from 'discord.js';
+import web from './background/web';
 import { token } from './config.json';
 import checkMessage from './utils/checkmessage';
 import reply from './utils/reply';
@@ -7,6 +8,7 @@ const bot = new discord.Client();
 
 bot.once('ready', () => {
     console.log(`Logged in as ${bot.user?.username}`);
+    web(bot, Date.now());
 });
 
 bot.on('message', msg => {
