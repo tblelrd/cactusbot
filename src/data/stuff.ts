@@ -16,6 +16,9 @@ export const trigger = {
     ],
     yes: [
         'yes', 'yeah', 'ye', 'agree', 'i agree'
+    ],
+    no: [
+        'no', 'nope', 'disagree'
     ]
 };
 
@@ -39,6 +42,11 @@ export const reply = {
     ],
     yes: [
         'Yep', 'Yesyes', 'Me too'
+    ],
+    no: [
+        'That\'s right, she doesn\'t consent',
+        'I disagree too',
+        'No'
     ]
 };
 
