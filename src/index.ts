@@ -1,6 +1,5 @@
 import discord from 'discord.js';
 import web from './background/web';
-import { token } from './config.json';
 import checkMessage from './utils/checkmessage';
 import reply from './utils/reply';
 
@@ -16,4 +15,9 @@ bot.on('message', msg => {
     reply(msg, bot);
 });
 
-bot.login(token);
+
+const Database = require("@replit/database")
+const db = new Database()
+db.get("token").then((token: any)=> {
+	bot.login(token);
+});
