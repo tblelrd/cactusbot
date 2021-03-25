@@ -14,6 +14,9 @@ export const trigger = {
     farewell: [
         'bye', 'goodbye', 'sayonara', 'cya',
     ],
+    yes: [
+        'yes', 'yeah', 'ye', 'agree', 'i agree'
+    ]
 };
 
 export const reply = {
@@ -34,6 +37,9 @@ export const reply = {
     farewell: [
         'Cya', 'Bye', 'e',
     ],
+    yes: [
+        'Yep', 'Yesyes', 'Me too'
+    ]
 };
 
 export const other = [
@@ -45,5 +51,4 @@ export const other = [
     'That\'s too big >//<',
     'Fist me hard >//<',
     'I\'ll put so much stuff inside you',
-    
 ]
