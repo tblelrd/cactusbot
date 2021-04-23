@@ -1,14 +1,15 @@
-import { Client, Message, User } from "discord.js";
-import { trigger as triggers, reply as replies, other } from "../data/stuff";
+import { Message, User } from "discord.js";
+import { responses, triggers } from '../data/normalStuff';
 
-const reply = (msg : Message, bot: Client) => {
-    const answer = stuff(msg.content, msg.author);
-    msg.channel.send(answer);
-}
 
-const stuff = (content: string, author: User): string => {
+const reply = (msg: Message) => {
+    const answ = '';
+    msg.channel.send(answ);
+};
+
+const stuff = (content: string, author: User) => { 
     const stuffs = Object.entries(triggers);
-    const moreStuffs = Object.entries(replies);
+    const moreStuffs = Object.entries(responses);
 
     const e = content.replace(/[^\w\s]/g, '').trim();
 
@@ -22,12 +23,11 @@ const stuff = (content: string, author: User): string => {
             }
         }
     }
-
-    return other[random(other.length)];
-}
+};
 
 const random = (length: number) => {
     return Math.floor(Math.random() * length);
 }
+
 
 export default reply;

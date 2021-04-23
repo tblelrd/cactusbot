@@ -19,6 +19,9 @@ export const trigger = {
     ],
     no: [
         'no', 'nope', 'disagree'
+    ],
+    neg11: [
+        '-11'
     ]
 };
 
@@ -47,6 +50,9 @@ export const reply = {
         'That\'s right, she doesn\'t consent',
         'I disagree too',
         'No'
+    ],
+    neg11: [
+        '<user> thats kinda mean >:(', '<user> >:((('
     ]
 };
 
