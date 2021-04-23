@@ -1,6 +1,7 @@
 import discord from 'discord.js';
 import web from './background/web';
 import checkMessage from './utils/checkmessage';
+import normalPersonReply from './utils/normalPersonReply';
 import reply from './utils/reply';
 
 const bot = new discord.Client();
@@ -11,7 +12,7 @@ bot.once('ready', () => {
 });
 
 bot.on('message', msg => {
-    if(checkMessage(msg)) return;
+    if(checkMessage(msg)) return normalPersonReply(msg);
     reply(msg, bot);
 });
 

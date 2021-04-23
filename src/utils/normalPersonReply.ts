@@ -11,7 +11,7 @@ const stuff = (content: string, author: User) => {
     const stuffs = Object.entries(triggers);
     const moreStuffs = Object.entries(responses);
 
-    const e = content.replace(/[^\w\s]/g, '').trim();
+    const e = content.replace(/[^\w\s\-]/g, '').trim();
 
     for(const [trigger, response] of stuffs) {
         for(const [rTrigger, rResponse] of moreStuffs) {
