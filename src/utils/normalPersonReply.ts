@@ -1,5 +1,6 @@
 import { Message, User } from "discord.js";
 import { responses, triggers } from '../data/normalStuff';
+import random from "./random";
 
 
 const reply = (msg: Message) => {
@@ -24,10 +25,5 @@ const stuff = (content: string, author: User) => {
         }
     }
 };
-
-const random = (length: number) => {
-    return Math.floor(Math.random() * length);
-}
-
 
 export default reply;

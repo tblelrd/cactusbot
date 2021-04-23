@@ -1,10 +1,11 @@
 import { Client, Message, User } from "discord.js";
 import { trigger as triggers, reply as replies, other } from "../data/stuff";
+import random from "./random";
 
 const reply = (msg : Message, bot: Client) => {
     const answer = stuff(msg.content, msg.author);
     msg.channel.send(answer);
-}
+};
 
 const stuff = (content: string, author: User): string => {
     const stuffs = Object.entries(triggers);
@@ -24,10 +25,6 @@ const stuff = (content: string, author: User): string => {
     }
 
     return other[random(other.length)];
-}
-
-const random = (length: number) => {
-    return Math.floor(Math.random() * length);
-}
+};
 
 export default reply;
