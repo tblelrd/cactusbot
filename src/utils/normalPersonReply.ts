@@ -3,8 +3,8 @@ import { responses, triggers } from '../data/normalStuff';
 
 
 const reply = (msg: Message) => {
-    const answ = '';
-    msg.channel.send(answ);
+    const answ = stuff(msg.content, msg.author);
+    answ ? msg.channel.send(answ) : '';
 };
 
 const stuff = (content: string, author: User) => { 
