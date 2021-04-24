@@ -65,4 +65,5 @@ export const other = [
     'That\'s too big >//<',
     'Fist me hard >//<',
     'I\'ll put so much stuff inside you',
+    'Choke me senpai!!',
 ]
